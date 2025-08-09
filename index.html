@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Nguyễn Thị Lụa</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header container">
+        <a href="#" class="logo">Profile</a>
+        <ul class="nav-links">
+            <li><a href="#" class="tab-link active" data-tab="about">Giới Thiệu</a></li>
+            <li><a href="#" class="tab-link" data-tab="skills">Kỹ Năng</a></li>
+            <li><a href="#" class="tab-link" data-tab="projects">Dự Án</a></li>
+            <li><a href="#" class="tab-link" data-tab="contact">Liên Hệ</a></li>
+        </ul>
+        <i class="ph ph-gear settings-icon"></i>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <div class="hero-content">
+              <p class="greeting">Hi, Chào mừng đến với My Profile</p>
+              <h1 class="name">Nguyễn Thị Lụa</h1>
+              <p class="subtitle">Software Engineering Student</p>
+              <p class="description">
+                Sinh viên năm 2 Viện NIIE, đam mê lập trình.
+              </p>
+              <div class="hero-buttons">
+                <a href="#" class="btn-primary">Xem Dự Án</a>
+                <a href="#" class="btn-secondary">Liên Hệ Tôi</a>
+              </div>
+            </div>
+        
+            <div class="hero-image-container">
+              <img src="me.webp" alt="Avatar của Tôi" class="hero-image" />
+            </div>
+        
+            <a href="#about" class="scroll-down">
+              <i class="ph ph-caret-down"></i>
+            </a>
+        </section>
+        
+        <section id="about" class="tab-content active container">
+            <h2>Giới Thiệu</h2>
+            <div class="about-grid">
+                <div class="about-item">
+                    <img src="my-hobby.webp" alt="Sở thích móc len">
+                    <p>Sở thích của tôi là móc len và làm đồ handmade.</p>
+                </div>
+                <div class="about-item">
+                    <img src="web.jpg" alt="Giao diện website">
+                    <p>Tôi là một lập trình viên và nhà thiết kế, luôn đam mê công nghệ và sự sáng tạo.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="skills" class="tab-content container">
+            <h2>Kỹ Năng</h2>
+            <ul class="skills-list">
+              <li>HTML/CSS</li>
+              <li>JavaScript</li>
+              <li>Python</li>
+              <li>C++</li>
+            </ul>
+        </section>
+        
+        <section id="projects" class="tab-content container">
+            <h2>Dự Án</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <img src="web.jpg" alt="Trang web cá nhân">
+                    <p>Trang web cá nhân</p>
+                </div>
+                <div class="project-item">
+                    <img src="memorigame.jpg" alt="Memory Game">
+                    <p>MemoriGame - game trí nhớ</p>
+                </div>
+                <div class="project-item">
+                    <img src="starup.png" alt="Khởi nghiệp">
+                    <p>Khởi nghiệp bán sữa gạo và panna cotta</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="tab-content container">
+            <h2>Liên Hệ</h2>
+            <form id="contactForm">
+              <label for="name">Tên của bạn:</label>
+              <input type="text" id="name" name="name" required placeholder="Nhập tên của bạn" />
+        
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required placeholder="email@domain.com" />
+        
+              <label for="message">Tin nhắn:</label>
+              <textarea id="message" name="message" required placeholder="Viết tin nhắn..."></textarea>
+        
+              <button type="submit">Gửi liên hệ</button>
+              <p id="form-status"></p>
+            </form>
+            <p>Hoặc liên hệ qua Email: <a href="mailto:nlua1965@gmail.com">nlua1965@gmail.com</a></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

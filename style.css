@@ -1,0 +1,234 @@
+/* --- Variables and Reset --- */
+:root {
+    --primary-color: #e2fdfe;
+    --secondary-color: #6DD5FA;
+    --text-color: #e6a3a3;
+    --white-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: var(--text-color);
+    background: url('backprofile.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header --- */
+.header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    max-width: 1200px;
+    padding: 20px 40px;
+    background: rgba(16, 31, 142, 0.85);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(28, 8, 143, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.header .nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.header .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.header .nav-links a:hover,
+.header .nav-links a.active {
+    color: var(--primary-color);
+}
+
+.header .nav-links a:hover::after,
+.header .nav-links a.active::after {
+    width: 100%;
+    left: 0;
+}
+
+.header .settings-icon {
+    font-size: 24px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+/* --- Tab Content --- */
+.tab-content {
+    display: none; /* Hide tabs by default */
+    padding: 40px 30px;
+    max-width: 1000px;
+    margin: 150px auto 50px;
+    color: var(--text-color);
+    background: rgba(16, 31, 142, 0.4);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(16, 31, 142, 0.7);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.tab-content.active {
+    display: block; /* Show the active tab */
+}
+
+.tab-content h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+/* --- Hero Section --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 80px;
+    gap: 40px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero-content .name {
+    font-size: 60px;
+    color: var(--text-color);
+}
+
+.hero-content .subtitle {
+    font-size: 22px;
+    color: var(--primary-color);
+}
+
+.hero-image {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid #afdbff;
+}
+
+/* --- Specific Section Styles --- */
+.about-grid, .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.about-item img, .project-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skills-list li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--primary-color);
+}
+
+/* --- Form Styles --- */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contactForm input, #contactForm textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: var(--white-color);
+    font-family: inherit;
+}
+
+#contactForm input::placeholder, #contactForm textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#contactForm button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: #002366;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contactForm button:hover {
+    background-color: var(--secondary-color);
+}
+
+#form-status {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* --- Animation --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
